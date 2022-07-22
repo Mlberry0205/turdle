@@ -1,3 +1,11 @@
+//Fetching the data
+
+function getData() {
+  fetch("http://localhost:3001/api/v1/words")
+  .then((response) => response.json())
+  .then(data => {wordsData = data setGame()})
+}
+
 // Global Variables
 var winningWord = '';
 var currentRow = 1;
